@@ -7,12 +7,12 @@
 
 body {
   background: #342E37;
-  }
+}
 
 .container {
   padding-top: 30px;
-} 
-  
+}
+
 h1 {
   color: #fff;
   font-family: 'Space Mono', monospace;
@@ -20,7 +20,7 @@ h1 {
   text-align: center;
   font-weight: 300;
 }
-  
+
 .container img {
   max-width: 30%;
   padding: 20px;
@@ -31,7 +31,7 @@ h1 {
 form {
   padding: 30px;
 }
-  
+
 .btn {
   outline: none;
   border: none;
@@ -44,9 +44,9 @@ form {
   border-radius: 20px;
   box-shadow: 0 6px #2E282A;
 }
-  
+
 .btn a {
-    color: white;
+  color: white;
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -57,21 +57,40 @@ form {
 
 .btn:hover {
   box-shadow: 0 4px #2E282A;
-  top: 2px; 
+  top: 2px;
 }
 
 .btn:active {
   box-shadow: none;
-  top: 6px; 
-} 
+  top: 6px;
+}
+
+/* Animación para título. */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-down-title {
+  animation: slideDown 3s ease-in-out;
+}
 
 
-/* Animación. */
+
+/* Animación para imagen */
 @keyframes fadeIn {
   from {
     opacity: 0;
     transform: scale(0);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -83,17 +102,20 @@ form {
   animation: fadeIn 3s ease-in-out forwards;
 }
 
-@keyframes slideDown {
+
+/* Animación para botón. */
+@keyframes slideLeft {
   from {
-    transform: translateY(-100%);
     opacity: 0;
+    transform: translateX(100%);
   }
-  to{
-    transform: translateY(0);
+
+  to {
     opacity: 1;
+    transform: translateX(0);
   }
 }
 
-.slide-down-title{
-  animation: slideDown 3s ease-in-out;
+.slide-left {
+  animation: slideLeft 3s ease-in-out;
 }
