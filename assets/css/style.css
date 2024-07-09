@@ -1,3 +1,10 @@
+/* 
+    Nombre estudiante: Germán A. Riveros Sepúlveda.
+    Generación: 14.
+    Jornada: Vespertina.   
+    Desafío: Branching. 
+*/
+
 body {
   background: #342E37;
   }
@@ -14,8 +21,8 @@ h1 {
   font-weight: 300;
 }
   
-img {
-  max-width: 40%;
+.container img {
+  max-width: 30%;
   padding: 20px;
   display: block;
   margin: 0 auto;
@@ -57,3 +64,36 @@ form {
   box-shadow: none;
   top: 6px; 
 } 
+
+
+/* Animación. */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-in-img {
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-down-title{
+  animation: slideDown 3s ease-in-out;
+}
